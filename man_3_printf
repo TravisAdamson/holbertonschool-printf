@@ -1,0 +1,48 @@
+.\" Manual page for the _printf function
+.\" This man page follows the man-db format.
+.TH _PRINTF 3 "July 2023" "Travis Adamson and Evan Markle"
+.SH NAME
+_printf \- A replication of the printf function
+.SH SYNOPSIS
+.B #include <main.h>
+.br
+.I int _printf(const char *format, ...);
+.PP
+\fB_printf\fR [format] [arguments]
+.SH DESCRIPTION
+\fB_printf\fR is a function that prints a formatted output. It can print whole numbers, numbers with decimals, strings, and characters. It does this by analyzing and interpreting the provided arguments' format.
+.SH RETURN VALUE
+\fB_printf\fR will return the number of characters printed. If an error occurs, it will return -1.
+.SH FORMAT SPECIFIERS
+The format string can include the following format specifiers:
+.IP \fB%c\fR
+Prints a character.
+.IP \fB%s\fR
+Prints a string.
+.IP \fB%d\fR
+Prints a signed decimal integer.
+.IP \fB%i\fR
+Prints an integer.
+.SH EXAMPLES
+Here are some examples on how to use \fB_printf\fR:
+.IP
+\fB_printf\fR("%c\n", 'a');
+.IP
+\fB_printf\fR("%s\n", "Hello World!");
+.IP
+\fB_printf\fR("%d\n", 10);
+.IP
+\fB_printf\fR("%i\n", -10).
+.SH SEE ALSO
+\fBprintf\fR(3), \fBsprintf\fR(3), \fBfprintf\fR(3)
+.SH BUGS
+None known.
+.SH AUTHOR
+Travis Adamson and Evan Markle
+.SH COPYRIGHT
+Copyright \(co 2023 Travis Adamson and Evan Markle. This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+.PP
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+.PP
+You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+
